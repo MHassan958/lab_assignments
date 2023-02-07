@@ -1,0 +1,155 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.banner{
+    width: 100%;
+    padding: 1px;
+    background-image:linear-gradient(to bottom, rgba(70, 70, 71, 0.52), rgba(27, 27, 27, 0.73)),
+    url("https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.ban_txt{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+}
+.title{
+    font-size: 25px;
+    color: white;
+}
+.intro{
+    font-size: 16px;
+    color: white;
+}
+.btn1{
+    padding: 10px 15px;
+    background-color: gray;
+    border: none;
+    margin-bottom: 100px;
+}
+
+.sec1{
+    width: 100%;
+    text-align: center;
+    padding: 1px;
+    
+}
+.sec1_txt{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.sec1_txt p{
+    width: 350px;
+    margin-left: 35px;
+}
+
+.sec2{
+    width: 100%;
+    padding: 1px;
+    background-color:rgb(65, 64, 64);
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+.cart1{
+    width: 200px;
+    height: auto;
+    text-align: center;
+    margin-top: 40px;
+    background-color: white;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.cart1 img{
+    width: 100%;
+}
+.cart1 p{
+    font-size: 16px;
+    padding: 15px;
+    color: grey;
+}
+.sec3{
+    text-align: center;
+    padding: 1px;
+}
+.sec3 h1{
+    margin-top: 50px;
+
+}
+.sec3 p{
+    width: auto;
+    padding: 40px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sec4{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    text-align: center;
+
+}
+.s4_s1{
+    width: 50%;
+    height: 300px;
+    color: white;
+    background-color: rgb(112, 74, 238)
+}
+.s4_s1 h1{
+    
+    margin-top: 50px;
+}
+.s4_s1 p{
+    padding: 20px;
+}
+.s4_s1 a{
+    color: white;
+}
+.s4_s2{
+    width: 50%;
+    height: 300px;
+    color: white;
+    background-color: rgb(65, 64, 64)
+}
+.s4_s2 h1{
+    
+    margin-top: 50px;
+}
+.s4_s2 p{
+    padding: 20px;
+}
+.sec5{
+    /* height: 80px; */
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: black;
+    align-items: center;
+    color: white;
+    justify-content: space-around;
+}
+.sec5 span{
+    color: blue;
+}
+
+@media screen and (max-width: 500px) {
+    .sec4{
+        flex-direction: column;
+    }
+    .s4_s1,.s4_s2{
+        width: 100%;
+    }
+    .cart1{
+        width: 300px;
+    }
+    
+}
