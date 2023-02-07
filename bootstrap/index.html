@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Portfolio</title>
+    <style>
+      #contact {
+        padding-top: 75px;
+        padding-bottom: 50px;
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cv">CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="jumbotron text-center">
+      <img
+        src="IMG_8139.jpg"
+        alt="Random Picture"
+        class="rounded-circle mb-3"
+        width="150"
+        height="150"
+      />
+      <h1 class="display-4">Muhammad Hassan</h1>
+      <p class="lead">MERN STACK Developer</p>
+      <hr />
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
+        dolores exercitationem ex nemo, odio quas autem incidunt ea, veniam
+        placeat ducimus magni, molestiae est doloribus eligendi! Odit saepe,
+        nesciunt consectetur beatae sint adipisci! Inventore quod tempore
+        laborum dolores dolore laboriosam repellendus perferendis tenetur modi
+        consequuntur deleniti saepe consectetur voluptate, nam ex soluta,
+        reprehenderit exercitationem ducimus. Nulla ea quis obcaecati enim
+        quidem temporibus consequuntur nesciunt, alias magni excepturi illo?
+        Reprehenderit illo velit dicta quas explicabo eaque veritatis repellat
+        soluta assumenda, animi ullam voluptatem voluptas nobis consectetur sed
+        asperiores amet culpa, maxime magnam natus atque officiis accusantium.
+        Accusamus enim quisquam reprehenderit repellat?
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="text-center my-5">Projects</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="https://images.pexels.com/photos/245032/pexels-photo-245032.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Project 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Project 1</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a href="#" class="btn btn-primary">See Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Project 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Project 1</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a href="#" class="btn btn-primary">See Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Project 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Project 1</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a href="#" class="btn btn-primary">See Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV section -->
+
+    <div class="container my-5">
+      <section id="cv">
+        <h2 class="text-center">CV</h2>
+        <hr />
+        <embed
+          src="Resume_M_Hassan(React_developer).pdf"
+          type="application/pdf"
+          width="100%"
+          height="500"
+        />
+        <br />
+        <br />
+        <a href="Resume_M_Hassan(React_developer).pdf" download>Download CV</a>
+      </section>
+
+      <!-- contact page -->
+
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2>Contact Me</h2>
+              <hr />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <form action="" method="post">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Your Message"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
