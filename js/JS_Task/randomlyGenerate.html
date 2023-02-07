@@ -1,0 +1,27 @@
+<!-- //●	Write a program in which you will randomly generate a number between 1 to 10. Save that number in a variable. Now just like in the sync explanation we got the value from and <input> tag. Get the value from the <input> convert it into integer number. Then compare previously randomly generated and input number form the user. If both numbers are same then show alert “Good Job” otherwise show alert “You missed”. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function checkNumber() {
+        let randomNumber = Math.floor(Math.random() * 10) + 1;
+        let userNumber = parseInt(document.getElementById("userInput").value);
+
+        if (randomNumber === userNumber) {
+          alert("Good job!");
+        } else {
+          alert("You missed");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="userInput" />
+    <button onclick="checkNumber()">Check</button>
+  </body>
+</html>

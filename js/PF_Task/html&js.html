@@ -1,0 +1,32 @@
+<!-- ●	Write a program that will take value from <input> in HTML page and when you press a ADD button it will add that to an array. You have to put a condition that if the number is integer than only it is added. If it is a character then do not add it. Also when you press the DISPLAY button all the values should be displayed in div.  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array Program</title>
+    <script>
+      let values = [];
+
+      function addValue() {
+        let input = document.getElementById("input").value;
+        if (!isNaN(input) && parseInt(input) == input) {
+          values.push(input);
+          document.getElementById("input").value = "";
+        } else {
+          alert("Please enter a valid integer.");
+        }
+      }
+
+      function displayValues() {
+        let display = document.getElementById("display");
+        display.innerHTML = values.join(", ");
+      }
+    </script>
+  </head>
+  <body>
+    <input id="input" type="text" />
+    <button onclick="addValue()">ADD</button>
+    <button onclick="displayValues()">DISPLAY</button>
+    <div id="display"></div>
+  </body>
+</html>
