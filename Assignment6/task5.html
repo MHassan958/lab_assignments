@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script>
+      function highlightWords() {
+        var p = document.getElementById("myParagraph");
+        var words = p.getElementsByTagName("b");
+        for (var i = 0; i < words.length; i++) {
+          words[i].style.backgroundColor = "yellow";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p id="myParagraph">
+      This is a <b>sample</b> paragraph with <b>bold</b> words.
+    </p>
+    <a href="#" onmouseover="highlightWords()">Highlight Bold Words</a>
+  </body>
+</html>

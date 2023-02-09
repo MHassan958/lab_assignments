@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function getElements(selector) {
+        if (selector[0] === "#") {
+          console.log("Please select ID");
+
+          return console.log([document.getElementById(selector.slice(1))]);
+        } else if (selector[0] === ".") {
+          console.log("Please select class " + selector.slice(1));
+          console.log(document.getElementsByClassName(selector.slice(1)));
+        } else {
+          console.log("Please select tag");
+
+          return document.getElementsByTagName(selector);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="nme">NAme</h1>
+    <label for="name"></label>
+    <input
+      type="text"
+      name="name"
+      placeholder="Enter name"
+      class="input"
+      id="inp"
+    />
+    <input type="text" name="name" placeholder="Enter name" class="input" />
+    <input type="text" name="name" placeholder="Enter name" class="input" />
+    <input type="text" name="name" placeholder="Enter name" class="input" />
+    <button onclick="getElements('.input')">Click to call class</button>
+    <button onclick="getElements('#nme')">Click to call id</button>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS DOM paragraph style</title>
+  </head>
+  <body>
+    <script>
+      function js_style() {
+        const x = document.getElementById("text");
+        if (x !== null) {
+          x.style.fontSize = "50px";
+          x.style.fontFamily = "cursive";
+          x.style.color = "red";
+        } else {
+          alert("Could not find Element");
+        }
+      }
+    </script>
+    <p id="text">JavaScript Exercises - w3resource</p>
+    <div>
+      <button id="jsstyle" onclick="js_style()">Style</button>
+    </div>
+  </body>
+</html>
