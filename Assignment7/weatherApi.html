@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Application</title>
+  </head>
+  <body>
+    <h1>Weather Application</h1>
+    <form>
+      <label for="city">Enter city name:</label>
+      <input type="text" id="city" name="city" />
+      <button id="submit-btn">Submit</button>
+    </form>
+    <div id="weather-info">
+      <!-- Weather details will be displayed here -->
+    </div>
+
+    <script>
+      const submitBtn = document.querySelector("#submit-btn");
+      const cityInput = document.querySelector("#city");
+      const weatherInfo = document.querySelector("#weather-info");
+
+      submitBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
+
+        const city = cityInput.value;
+        const apiKey = "53b5850c5a31efda7f1e68fcb41f599d";
+        const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+        const response = await fetch(url);
+        const data = await response.json();
+
+        const weather = data.weather[0];
+        const temperature = data.main;
+        const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+        const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+        const coordinates = data.coord;
+
+        weatherInfo.innerHTML = `
+          <p>Weather: ${weather.description}</p>
+          <p>Temperature: ${temperature.temp}°F (Feels like ${temperature.feels_like}°F)</p>
+          <p>Sunrise: ${sunrise}</p>
+          <p>Sunset: ${sunset}</p>
+          <p>Coordinates: Latitude: ${coordinates.lat}, Longitude: ${coordinates.lon}</p>
+        `;
+      });
+    </script>
+  </body>
+</html>

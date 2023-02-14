@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Astronomy Picture of the Day (APOD) from NASA</title>
+  </head>
+  <body>
+    <h1>Astronomy Picture of the Day (APOD) from NASA</h1>
+    <div id="apodContainer"></div>
+  </body>
+  <script>
+    const API_KEY = "b5YUNChKE987NzVz0KvGoRaBHcFUEH3v1BW8atMo";
+    const apodContainer = document.getElementById("apodContainer");
+
+    const xhr = new XMLHttpRequest();
+    xhr.open(
+      "GET",
+      `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`,
+      true
+    );
+    xhr.onreadystatechange = function () {
+      if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+        const response = JSON.parse(this.responseText);
+        const picture = response.url;
+        const copyrights = response.copyright;
+        const title = response.title;
+        const description = response.explanation;
+
+        apodContainer.innerHTML = `
+          <img src="${picture}" alt="Astronomy Picture of the Day">
+          <p>Copyright: ${copyrights || "Unknown"}</p>
+          <h2>${title}</h2>
+          <p>${description}</p>
+        `;
+      }
+    };
+    xhr.send();
+  </script>
+</html>
